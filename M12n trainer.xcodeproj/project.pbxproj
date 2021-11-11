@@ -18,6 +18,7 @@
 		08E9F1DB273561C70060B792 /* M12n_trainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9F1DA273561C70060B792 /* M12n_trainerUITests.swift */; };
 		08E9F1DD273561C70060B792 /* M12n_trainerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9F1DC273561C70060B792 /* M12n_trainerUITestsLaunchTests.swift */; };
 		08E9F1EF27366BB30060B792 /* PlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9F1EE27366BB20060B792 /* PlayController.swift */; };
+		9B64C4ED273D824E008D9D84 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B64C4EC273D824E008D9D84 /* RoundButton.swift */; };
 		B27CB15601825AA6AEC1175B /* Pods_M12n_trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A820804A2C5D199300BB2A /* Pods_M12n_trainer.framework */; };
 		E252DD3D38E5CA66DCC5C99A /* Pods_M12n_trainer_M12n_trainerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5316C7BE9ED70F91FEAF73D4 /* Pods_M12n_trainer_M12n_trainerUITests.framework */; };
 		F3D22F88A873327CD003251D /* Pods_M12n_trainerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF98443FD26806377A4A24B5 /* Pods_M12n_trainerTests.framework */; };
@@ -65,6 +66,7 @@
 		5316C7BE9ED70F91FEAF73D4 /* Pods_M12n_trainer_M12n_trainerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M12n_trainer_M12n_trainerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6219A1FF0B3F3A4D2574916C /* Pods-M12n trainer-M12n trainerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M12n trainer-M12n trainerUITests.release.xcconfig"; path = "Target Support Files/Pods-M12n trainer-M12n trainerUITests/Pods-M12n trainer-M12n trainerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7BA46BCD2E6B81462D17A60E /* Pods-M12n trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M12n trainer.debug.xcconfig"; path = "Target Support Files/Pods-M12n trainer/Pods-M12n trainer.debug.xcconfig"; sourceTree = "<group>"; };
+		9B64C4EC273D824E008D9D84 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		BF98443FD26806377A4A24B5 /* Pods_M12n_trainerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_M12n_trainerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0516D4339FE1E639E773EB /* Pods-M12n trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M12n trainer.release.xcconfig"; path = "Target Support Files/Pods-M12n trainer/Pods-M12n trainer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 				08E9F1B6273561C30060B792 /* AppDelegate.swift */,
 				08E9F1B8273561C30060B792 /* SceneDelegate.swift */,
 				08E9F1BA273561C30060B792 /* ViewController.swift */,
+				9B64C4EC273D824E008D9D84 /* RoundButton.swift */,
 				08E9F1BC273561C30060B792 /* Main.storyboard */,
 				08E9F1C2273561C70060B792 /* Assets.xcassets */,
 				08E9F1C4273561C70060B792 /* LaunchScreen.storyboard */,
@@ -388,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B64C4ED273D824E008D9D84 /* RoundButton.swift in Sources */,
 				08E9F1BB273561C30060B792 /* ViewController.swift in Sources */,
 				08E9F1B7273561C30060B792 /* AppDelegate.swift in Sources */,
 				08E9F1B9273561C30060B792 /* SceneDelegate.swift in Sources */,
