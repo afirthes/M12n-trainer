@@ -163,8 +163,8 @@
                                     <action selector="stopGame:" destination="t98-sL-Hlu" eventType="touchUpInside" id="ghd-DO-AYV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123 sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmF-Pb-fIZ">
-                                <rect key="frame" x="253.5" y="20" width="105.5" height="35.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmF-Pb-fIZ">
+                                <rect key="frame" x="287.5" y="20" width="71.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -252,6 +252,7 @@
                         <outlet property="bottomRightButton" destination="oqD-Hg-K0e" id="bPu-3H-mzZ"/>
                         <outlet property="closeButton" destination="LG3-3j-COp" id="yqQ-9l-urY"/>
                         <outlet property="questionTopConstraint" destination="Ooe-DQ-L8p" id="7XE-Zg-hQl"/>
+                        <outlet property="timeLeftLabel" destination="YmF-Pb-fIZ" id="W83-Ph-QDN"/>
                         <outlet property="topLeftButton" destination="Rqo-TA-yYa" id="E5E-Zc-egv"/>
                         <outlet property="topRightButton" destination="xJM-Fl-GVN" id="V45-fb-pkJ"/>
                     </connections>

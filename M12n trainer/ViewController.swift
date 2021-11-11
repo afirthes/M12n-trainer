@@ -34,8 +34,6 @@ class ViewController: UIViewController {
         self.mainQuote.layer.masksToBounds = false
     }
     
-   
-    
     override func viewWillLayoutSubviews() {
         self.gradient.frame = self.view.bounds
         self.mainQuote.sizeToFit()
@@ -47,14 +45,10 @@ class ViewController: UIViewController {
             width: self.view.bounds.width,
             height: self.mainQuote.frame.height + 100
         )
-        
-
     }
     
     fileprivate func setMainQuoteText(_ text: String) {
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.minimumLineHeight = 22
-        paragraphStyle.maximumLineHeight = 22
         paragraphStyle.alignment = .center
         let textAttr = NSAttributedString(string: text, attributes: [
             .font: UIFont(name: "SavoyeLetPlain", size: 28)!,

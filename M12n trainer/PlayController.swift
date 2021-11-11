@@ -10,11 +10,14 @@ import UIKit
 
 class PlayController: UIViewController {
     
+    @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var topLeftButton: UIButton!
     @IBOutlet weak var topRightButton: UIButton!
     @IBOutlet weak var bottomLeftButton: UIButton!
     @IBOutlet weak var bottomRightButton: UIButton!
-    
+    private var timer: Timer?
+    private var startDate = Date()
+
     private var gradient: CAGradientLayer = CAGradientLayer()
     @IBOutlet weak var questionTopConstraint: NSLayoutConstraint!
     
@@ -39,8 +42,6 @@ class PlayController: UIViewController {
         let screenHeight = screenRect.size.height
         
         let cornerGap = round((screenWidth - 200) / 3)
-        let middleGap = (screenWidth - 200) - (cornerGap * 2)
-        
         
         topLeftButton.translatesAutoresizingMaskIntoConstraints = false
         topRightButton.translatesAutoresizingMaskIntoConstraints = false
@@ -67,15 +68,27 @@ class PlayController: UIViewController {
             topRightButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -cornerGap),
             topRightButton.widthAnchor.constraint(equalToConstant: 100),
             topRightButton.heightAnchor.constraint(equalToConstant: 100)
-            
-            
         ])
         
-        
         questionTopConstraint.constant = (screenHeight - cornerGap * 2 - 200) / 2
-        
-        
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startDate = Date()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc
+    func timerAction() {
+        let timeSpent = Date().timeIntervalSince(startDate)
+        timeLeftLabel.text = "\(Int(timeSpent)) sec"
     }
     
     override func viewWillLayoutSubviews() {
