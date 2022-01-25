@@ -14,7 +14,11 @@ class AnswerRoundButton: UIButton {
     @IBInspectable
     var cornerRadius: CGFloat = 0 {
         didSet {
-            layer.cornerRadius = cornerRadius
+            if cornerRadius == -1 {
+                layer.cornerRadius = bounds.width / 2
+            } else {
+                layer.cornerRadius = cornerRadius
+            }
         }
     }
     
@@ -40,6 +44,13 @@ class AnswerRoundButton: UIButton {
         super.prepareForInterfaceBuilder()
         clipsToBounds = true
         layer.borderColor = tintColor.cgColor
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if cornerRadius == -1 {
+            layer.cornerRadius = bounds.width / 2
+        }
     }
     
 }

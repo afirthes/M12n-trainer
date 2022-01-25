@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08B08EFD27A01EDB0016D249 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B08EFC27A01EDB0016D249 /* Game.swift */; };
 		08E9F1B7273561C30060B792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9F1B6273561C30060B792 /* AppDelegate.swift */; };
 		08E9F1B9273561C30060B792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9F1B8273561C30060B792 /* SceneDelegate.swift */; };
 		08E9F1BB273561C30060B792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9F1BA273561C30060B792 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		070B6B55F7DBEFCD770F2F57 /* Pods-M12n trainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M12n trainerTests.release.xcconfig"; path = "Target Support Files/Pods-M12n trainerTests/Pods-M12n trainerTests.release.xcconfig"; sourceTree = "<group>"; };
+		08B08EFC27A01EDB0016D249 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		08E9F1B3273561C30060B792 /* M12n trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M12n trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E9F1B6273561C30060B792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E9F1B8273561C30060B792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08B08EFB27A01EC40016D249 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08B08EFC27A01EDB0016D249 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		08E9F1AA273561C30060B792 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		08E9F1B5273561C30060B792 /* M12n trainer */ = {
 			isa = PBXGroup;
 			children = (
+				08B08EFB27A01EC40016D249 /* Model */,
 				08E9F1E92735890C0060B792 /* Fonts */,
 				08E9F1B6273561C30060B792 /* AppDelegate.swift */,
 				08E9F1B8273561C30060B792 /* SceneDelegate.swift */,
@@ -393,6 +404,7 @@
 			files = (
 				9B64C4ED273D824E008D9D84 /* RoundButton.swift in Sources */,
 				08E9F1BB273561C30060B792 /* ViewController.swift in Sources */,
+				08B08EFD27A01EDB0016D249 /* Game.swift in Sources */,
 				08E9F1B7273561C30060B792 /* AppDelegate.swift in Sources */,
 				08E9F1B9273561C30060B792 /* SceneDelegate.swift in Sources */,
 				08E9F1C1273561C30060B792 /* M12n_trainer.xcdatamodeld in Sources */,

@@ -63,5 +63,13 @@ class ViewController: UIViewController {
     @IBAction func startToPlay(_ sender: UIButton) {
         performSegue(withIdentifier: "playSegue", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playSegue" {
+            if let destinationVC = segue.destination as? PlayController {
+                destinationVC.game = Game()
+            }
+        }
+    }
 }
 
