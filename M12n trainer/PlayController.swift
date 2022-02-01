@@ -90,29 +90,25 @@ class PlayController: UIViewController {
         xNumber.text = question.x.description
         yNumber.text = question.y.description
         
-        topLeftButton.setTitle(question.answers[0].description, for: .normal)
-        topRightButton.setTitle(question.answers[1].description, for: .normal)
-        bottomLeftButton.setTitle(question.answers[2].description, for: .normal)
-        bottomRightButton.setTitle(question.answers[3].description, for: .normal)
+        topLeftButton.setTitle(question.answers[0].value.description, for: .normal)
+        topRightButton.setTitle(question.answers[1].value.description, for: .normal)
+        bottomLeftButton.setTitle(question.answers[2].value.description, for: .normal)
+        bottomRightButton.setTitle(question.answers[3].value.description, for: .normal)
+        
+        topLeftButton.backgroundColor = .clear
+        topRightButton.backgroundColor = .clear
+        bottomLeftButton.backgroundColor = .clear
+        bottomRightButton.backgroundColor = .clear
     }
     
-    @IBAction func topLeftPressed(_ sender: AnswerRoundButton) {
-        sender.backgroundColor = .green
-        answered = true
-    }
-    
-    @IBAction func topRightPressed(_ sender: AnswerRoundButton) {
-        sender.backgroundColor = .green
-        answered = true
-    }
-    
-    @IBAction func bottomLeftPressed(_ sender: AnswerRoundButton) {
-        sender.backgroundColor = .green
-        answered = true
-    }
-    
-    @IBAction func bottomRightPressed(_ sender: AnswerRoundButton) {
-        sender.backgroundColor = .green
+    @IBAction func didPressAnswerButton(_ sender: AnswerRoundButton) {
+        guard !answered else { return }
+        
+        let question = game.questions[questionIndex]
+        let answer = question.answers[sender.tag - 1]
+        game.questions[questionIndex].answer = answer
+        
+        sender.backgroundColor = answer.isCorrect ? .green : .red
         answered = true
     }
     
@@ -128,6 +124,7 @@ class PlayController: UIViewController {
                 self.navigationController?.popToRootViewController(animated: true)
             }
             updateQuestion()
+            answered = false
         }
     }
     

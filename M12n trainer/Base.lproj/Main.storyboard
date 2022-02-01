@@ -194,7 +194,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-hc-iEK">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="104.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqo-TA-yYa" customClass="AnswerRoundButton" customModule="M12n_trainer" customModuleProvider="target">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqo-TA-yYa" customClass="AnswerRoundButton" customModule="M12n_trainer" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="104.5" height="104.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Rqo-TA-yYa" secondAttribute="height" id="1fj-qo-5X3"/>
@@ -213,10 +213,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="topLeftPressed:" destination="t98-sL-Hlu" eventType="touchUpInside" id="Jvx-ba-gaP"/>
+                                                    <action selector="didPressAnswerButton:" destination="t98-sL-Hlu" eventType="touchUpInside" id="ROd-6I-o7A"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJM-Fl-GVN" customClass="AnswerRoundButton" customModule="M12n_trainer" customModuleProvider="target">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJM-Fl-GVN" customClass="AnswerRoundButton" customModule="M12n_trainer" customModuleProvider="target">
                                                 <rect key="frame" x="151.5" y="0.0" width="104.5" height="104.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xJM-Fl-GVN" secondAttribute="height" multiplier="1:1" id="Maf-KF-ZUU"/>
@@ -235,7 +235,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="topRightPressed:" destination="t98-sL-Hlu" eventType="touchUpInside" id="U2F-QX-1j8"/>
+                                                    <action selector="didPressAnswerButton:" destination="t98-sL-Hlu" eventType="touchUpInside" id="Akv-b5-fKX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -243,7 +243,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="PY1-M8-d0h">
                                         <rect key="frame" x="0.0" y="151.5" width="256" height="104.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsu-AJ-Wao" customClass="AnswerRoundButton" customModule="M12n_trainer" customModuleProvider="target">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsu-AJ-Wao" customClass="AnswerRoundButton" customModule="M12n_trainer" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="104.5" height="104.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Zsu-AJ-Wao" secondAttribute="height" id="Fgq-sH-Hp0"/>
@@ -262,10 +262,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="bottomLeftPressed:" destination="t98-sL-Hlu" eventType="touchUpInside" id="yV9-ef-pOx"/>
+                                                    <action selector="didPressAnswerButton:" destination="t98-sL-Hlu" eventType="touchUpInside" id="751-v5-uFS"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqD-Hg-K0e" customClass="AnswerRoundButton" customModule="M12n_trainer" customModuleProvider="target">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqD-Hg-K0e" customClass="AnswerRoundButton" customModule="M12n_trainer" customModuleProvider="target">
                                                 <rect key="frame" x="151.5" y="0.0" width="104.5" height="104.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oqD-Hg-K0e" secondAttribute="height" multiplier="1:1" id="wdH-87-Kgm"/>
@@ -284,7 +284,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="bottomRightPressed:" destination="t98-sL-Hlu" eventType="touchUpInside" id="aJ4-ry-c1u"/>
+                                                    <action selector="didPressAnswerButton:" destination="t98-sL-Hlu" eventType="touchUpInside" id="1ax-FF-c9s"/>
                                                 </connections>
                                             </button>
                                         </subviews>

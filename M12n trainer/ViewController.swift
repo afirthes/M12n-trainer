@@ -17,11 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gradient.colors = [
-            UIColor(named: "backgroundGradientTop")!.cgColor,
-            //UIColor(named: "backgroundGradientTop")!.cgColor
-            UIColor(named: "backgroundGradientBottom")!.cgColor
-        ]
+        updateBackgroundGradient()
         gradient.locations = [0, 1]
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 0, y: 1)
@@ -32,6 +28,18 @@ class ViewController: UIViewController {
             Counting and computing is the basis of order in your head
             """)
         self.mainQuote.layer.masksToBounds = false
+    }
+    
+    func updateBackgroundGradient() {
+        gradient.colors = [
+            UIColor(named: "backgroundGradientTop")!.cgColor,
+            UIColor(named: "backgroundGradientBottom")!.cgColor
+        ]
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updateBackgroundGradient()
     }
     
     override func viewWillLayoutSubviews() {
