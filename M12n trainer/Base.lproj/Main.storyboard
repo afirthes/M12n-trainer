@@ -97,14 +97,8 @@
                                     <constraint firstItem="wMU-lu-s4l" firstAttribute="leading" secondItem="CmT-cv-PXJ" secondAttribute="leading" id="g3i-cj-Gax"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johann Heinrich Pestalozzi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS0-Cn-068">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johann Heinrich Pestalozzi" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS0-Cn-068">
                                 <rect key="frame" x="30" y="223.5" width="260" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1746 – 1827" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt8-1u-Xev">
-                                <rect key="frame" x="30" y="249" width="260" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -114,10 +108,8 @@
                         <color key="backgroundColor" name="backgroundGradientTop"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yIM-FX-Zma" secondAttribute="trailing" constant="25" id="5ui-sX-SPc"/>
-                            <constraint firstItem="tt8-1u-Xev" firstAttribute="top" secondItem="TS0-Cn-068" secondAttribute="bottom" constant="5" id="8r6-rV-JX3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JNF-Pc-G72" secondAttribute="trailing" constant="30" id="97A-mC-561"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yIM-FX-Zma" secondAttribute="bottom" constant="30" id="9HV-7b-aaO"/>
-                            <constraint firstItem="tt8-1u-Xev" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Lmz-0O-7fR"/>
                             <constraint firstItem="JNF-Pc-G72" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="PDv-9x-lSi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TS0-Cn-068" secondAttribute="trailing" constant="30" id="RuJ-je-9QC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CmT-cv-PXJ" secondAttribute="trailing" constant="50" id="W0X-p7-Wxw"/>
@@ -127,11 +119,11 @@
                             <constraint firstItem="TS0-Cn-068" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="d1o-8R-hVx"/>
                             <constraint firstItem="yIM-FX-Zma" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="nJE-1y-tmq"/>
                             <constraint firstItem="JNF-Pc-G72" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xeZ-Rn-B1a"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tt8-1u-Xev" secondAttribute="trailing" constant="30" id="zBD-px-Gdp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8m4-I6-b6t"/>
                     <connections>
+                        <outlet property="author" destination="TS0-Cn-068" id="2Fg-HS-OBy"/>
                         <outlet property="mainQuote" destination="JNF-Pc-G72" id="pOK-sS-olR"/>
                         <segue destination="t98-sL-Hlu" kind="show" identifier="playSegue" id="ULv-ME-v2m"/>
                     </connections>

@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainQuote: UILabel!
     private var gradient: CAGradientLayer = CAGradientLayer()
     private var kern = 1.0;
-
+    @IBOutlet weak var author: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,9 +25,13 @@ class ViewController: UIViewController {
         
         self.view.layer.insertSublayer(gradient, at: 0)
         
-        setMainQuoteText("""
-            Counting and computing is the basis of order in your head
-            """)
+        updateQuote()
+    }
+    
+    func updateQuote() {
+        let quote:Quoter.Quote = Quoter.shared.random()
+        setMainQuoteText(quote.text)
+        self.author.text = quote.author
         self.mainQuote.layer.masksToBounds = false
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0033F6E227A9523E004670B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0033F6E427A9523E004670B3 /* Localizable.strings */; };
+		0033F6EA27A95E45004670B3 /* Quoter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033F6E927A95E45004670B3 /* Quoter.swift */; };
 		08B08EFD27A01EDB0016D249 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B08EFC27A01EDB0016D249 /* Game.swift */; };
 		08E9F1B7273561C30060B792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9F1B6273561C30060B792 /* AppDelegate.swift */; };
 		08E9F1B9273561C30060B792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9F1B8273561C30060B792 /* SceneDelegate.swift */; };
@@ -43,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0033F6DE27A9517E004670B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		0033F6DF27A9517E004670B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0033F6E327A9523E004670B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0033F6E527A95240004670B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0033F6E927A95E45004670B3 /* Quoter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quoter.swift; sourceTree = "<group>"; };
 		070B6B55F7DBEFCD770F2F57 /* Pods-M12n trainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M12n trainerTests.release.xcconfig"; path = "Target Support Files/Pods-M12n trainerTests/Pods-M12n trainerTests.release.xcconfig"; sourceTree = "<group>"; };
 		08B08EFC27A01EDB0016D249 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		08E9F1B3273561C30060B792 /* M12n trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "M12n trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0033F6E827A95E34004670B3 /* Quoter */ = {
+			isa = PBXGroup;
+			children = (
+				0033F6E927A95E45004670B3 /* Quoter.swift */,
+			);
+			path = Quoter;
+			sourceTree = "<group>";
+		};
 		08B08EFB27A01EC40016D249 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +149,7 @@
 		08E9F1B5273561C30060B792 /* M12n trainer */ = {
 			isa = PBXGroup;
 			children = (
+				0033F6E827A95E34004670B3 /* Quoter */,
 				08B08EFB27A01EC40016D249 /* Model */,
 				08E9F1E92735890C0060B792 /* Fonts */,
 				08E9F1B6273561C30060B792 /* AppDelegate.swift */,
@@ -146,6 +162,7 @@
 				08E9F1C7273561C70060B792 /* Info.plist */,
 				08E9F1BF273561C30060B792 /* M12n_trainer.xcdatamodeld */,
 				08E9F1EE27366BB20060B792 /* PlayController.swift */,
+				0033F6E427A9523E004670B3 /* Localizable.strings */,
 			);
 			path = "M12n trainer";
 			sourceTree = "<group>";
@@ -288,6 +305,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 08E9F1AA273561C30060B792;
 			productRefGroup = 08E9F1B4273561C30060B792 /* Products */;
@@ -307,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08E9F1C6273561C70060B792 /* LaunchScreen.storyboard in Resources */,
+				0033F6E227A9523E004670B3 /* Localizable.strings in Resources */,
 				08E9F1C3273561C70060B792 /* Assets.xcassets in Resources */,
 				08E9F1BE273561C30060B792 /* Main.storyboard in Resources */,
 			);
@@ -409,6 +428,7 @@
 				08E9F1B9273561C30060B792 /* SceneDelegate.swift in Sources */,
 				08E9F1C1273561C30060B792 /* M12n_trainer.xcdatamodeld in Sources */,
 				08E9F1EF27366BB30060B792 /* PlayController.swift in Sources */,
+				0033F6EA27A95E45004670B3 /* Quoter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,10 +465,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0033F6E427A9523E004670B3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0033F6E327A9523E004670B3 /* en */,
+				0033F6E527A95240004670B3 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		08E9F1BC273561C30060B792 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				08E9F1BD273561C30060B792 /* Base */,
+				0033F6DE27A9517E004670B3 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -457,6 +487,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				08E9F1C5273561C70060B792 /* Base */,
+				0033F6DF27A9517E004670B3 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -468,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -529,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

@@ -144,7 +144,8 @@ class PlayController: UIViewController {
     @objc
     func timerAction() {
         let timeSpent = Date().timeIntervalSince(startDate)
-        timeLeftLabel.text = "\(Int(timeSpent)) sec"
+        let sec = NSLocalizedString("sec", comment: "")
+        timeLeftLabel.text = "\(Int(timeSpent)) \(sec)"
     }
     
     override func viewWillLayoutSubviews() {

@@ -1,0 +1,57 @@
+
+/* Class = "UINavigationItem"; title = "Play"; ObjectID = "1JD-lk-siv"; */
+"1JD-lk-siv.title" = "Играть";
+
+/* Class = "UILabel"; text = "Counting and computing is the basis of order in your head"; ObjectID = "JNF-Pc-G72"; */
+"JNF-Pc-G72.text" = "Счет и вычисления – основы порядка в голове";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LG3-3j-COp"; */
+"LG3-3j-COp.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Rqo-TA-yYa"; */
+"Rqo-TA-yYa.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Johann Heinrich Pestalozzi"; ObjectID = "TS0-Cn-068"; */
+"TS0-Cn-068.text" = "Иоганн Генрих Песталоцци";
+
+/* Class = "UILabel"; text = "0 sec"; ObjectID = "YmF-Pb-fIZ"; */
+"YmF-Pb-fIZ.text" = "0 сек.";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Zsu-AJ-Wao"; */
+"Zsu-AJ-Wao.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Statistics"; ObjectID = "ePw-K7-B1V"; */
+"ePw-K7-B1V.configuration.title" = "Статистика";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ePw-K7-B1V"; */
+"ePw-K7-B1V.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "44"; ObjectID = "gAu-zd-D61"; */
+"gAu-zd-D61.text" = "44";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oqD-Hg-K0e"; */
+"oqD-Hg-K0e.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "22"; ObjectID = "qV9-Li-caD"; */
+"qV9-Li-caD.text" = "22";
+
+/* Class = "UILabel"; text = "1746 – 1827"; ObjectID = "tt8-1u-Xev"; */
+"tt8-1u-Xev.text" = "1746 – 1827";
+
+/* Class = "UIButton"; configuration.title = "Play"; ObjectID = "wMU-lu-s4l"; */
+"wMU-lu-s4l.configuration.title" = "Играть";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wMU-lu-s4l"; */
+"wMU-lu-s4l.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xJM-Fl-GVN"; */
+"xJM-Fl-GVN.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Learn"; ObjectID = "yDe-yl-b7v"; */
+"yDe-yl-b7v.configuration.title" = "Обучение";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yDe-yl-b7v"; */
+"yDe-yl-b7v.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yIM-FX-Zma"; */
+"yIM-FX-Zma.normalTitle" = "Button";
