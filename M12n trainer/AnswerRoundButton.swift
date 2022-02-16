@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class AnswerRoundButton: UIButton {
-    
+
     @IBInspectable
     var cornerRadius: CGFloat = 0 {
         didSet {
@@ -29,10 +29,23 @@ class AnswerRoundButton: UIButton {
         }
     }
     
+    private let backgroundLayer = CAShapeLayer()
+    
+    override var backgroundColor: UIColor? {
+        set {
+            setBackgroundColor(newValue)
+        }
+        get {
+            guard let backgroundColor = backgroundLayer.backgroundColor else { return nil }
+            return UIColor(cgColor: backgroundColor)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         clipsToBounds = true
         layer.borderColor = tintColor.cgColor
+        layer.insertSublayer(backgroundLayer, at: 0)
     }
     
     override func tintColorDidChange() {
@@ -51,6 +64,25 @@ class AnswerRoundButton: UIButton {
         if cornerRadius == -1 {
             layer.cornerRadius = bounds.width / 2
         }
+        backgroundLayer.frame = layer.bounds
+        backgroundLayer.cornerRadius = layer.cornerRadius
+    }
+    
+    func setBackgroundColor(_ color: UIColor?, animated: Bool = true) {
+        let color = color ?? .clear
+        guard animated, color != .clear else {
+            backgroundLayer.backgroundColor = color.cgColor
+            return
+        }
+        
+        let animation = CABasicAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0.05
+        animation.toValue = 1
+        animation.duration = 0.3
+        
+        backgroundLayer.backgroundColor = color.cgColor
+        backgroundLayer.add(animation, forKey: "scale")
+        
     }
     
 }

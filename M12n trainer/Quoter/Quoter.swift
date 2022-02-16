@@ -15,18 +15,26 @@ class Quoter {
         let author:String
     }
     
-    let quotesCount = 3
-    
     static let shared = Quoter()
     
     let quotes:[Quote]
 
     private init() {
         var qs = Array<Quote>()
-        for i in 0..<quotesCount {
-            let phrase = NSLocalizedString("phrase\(i)", comment: "")
-            let author = NSLocalizedString("author\(i)", comment: "")
-            qs.append(Quote(text: phrase, author: author))
+        var index = 0
+    
+        while index >= 0 {
+            let phraseKey = "phrase\(index)"
+            let authorKey = "author\(index)"
+            let phrase = NSLocalizedString(phraseKey, comment: "")
+            let author = NSLocalizedString(authorKey, comment: "")
+            
+            if phrase == phraseKey || author == authorKey {
+                index = -1
+            } else {
+                qs.append(Quote(text: phrase, author: author))
+                index += 1
+            }
         }
         self.quotes = qs
     }

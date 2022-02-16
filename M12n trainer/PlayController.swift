@@ -109,6 +109,7 @@ class PlayController: UIViewController {
         game.questions[questionIndex].answer = answer
         
         sender.backgroundColor = answer.isCorrect ? .green : .red
+        
         answered = true
     }
     
