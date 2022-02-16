@@ -158,7 +158,8 @@ class PlayController: UIViewController {
     }
     
     @IBAction func stopGame(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        performSegue(withIdentifier: "resultSeque", sender: self)
+        //self.navigationController?.popToRootViewController(animated: true)
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
