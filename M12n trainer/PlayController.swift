@@ -26,6 +26,7 @@ class PlayController: UIViewController {
     
     private var timer: Timer?
     private var startDate = Date()
+    private var questionStartDate = Date()
 
     private var gradient: CAGradientLayer = CAGradientLayer()
     @IBOutlet weak var questionTopConstraint: NSLayoutConstraint!
@@ -99,6 +100,8 @@ class PlayController: UIViewController {
         topRightButton.backgroundColor = .clear
         bottomLeftButton.backgroundColor = .clear
         bottomRightButton.backgroundColor = .clear
+        
+        questionStartDate = Date()
     }
     
     @IBAction func didPressAnswerButton(_ sender: AnswerRoundButton) {
@@ -106,12 +109,18 @@ class PlayController: UIViewController {
         
         let question = game.questions[questionIndex]
         let answer = question.answers[sender.tag - 1]
-        game.questions[questionIndex].answer = answer
+        //game.questions[questionIndex].answer = answer
+        let time = Date().timeIntervalSince(questionStartDate)
+    
+        // TODO: добавить время
+        game.registerAnswer(question: question, answer: answer, time: time)
         
         sender.backgroundColor = answer.isCorrect ? .green : .red
         
         answered = true
     }
+    
+    
     
     private func setupBackgroundTap() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundTapped))
@@ -123,6 +132,8 @@ class PlayController: UIViewController {
             questionIndex += 1
             if questionIndex >= Game.QUESTIONS_IN_GAME {
                 self.navigationController?.popToRootViewController(animated: true)
+                print("-END-")
+                print(game.statistics)
             }
             updateQuestion()
             answered = false

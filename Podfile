@@ -4,6 +4,7 @@ platform :ios, '15.0'
 target 'M12n trainer' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  pod 'RealmSwift'
 
   target 'M12n trainerTests' do
     inherit! :search_paths

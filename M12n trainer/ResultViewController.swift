@@ -8,25 +8,41 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    @IBOutlet weak var animationView: CustomizableAnimation!
+    
+    private var gradient: CAGradientLayer = CAGradientLayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        gradient.colors = [
+            UIColor(named: "backgroundGradientTop")!.cgColor,
+            //UIColor(named: "backgroundGradientTop")!.cgColor
+            UIColor(named: "backgroundGradientBottom")!.cgColor
+        ]
+        gradient.locations = [0, 1]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        
+        self.view.layer.insertSublayer(gradient, at: 0)
+        
+        self.animationView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(startAnim)))
+        self.view.isUserInteractionEnabled = true
+        
+    }
+    
+    @objc
+    func startAnim() {
+        animationView.startAnimation()
     }
     
     @IBAction func pressedOk(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillLayoutSubviews() {
+        self.gradient.frame = self.view.bounds
     }
-    */
 
 }
